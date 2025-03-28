@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Add Employee</title>
+    {% include 'bootstrap.html' %}
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h1 class="text-center my-3">Add New Employee</h1>
+  
+    <div class="container">
+    <div class="row">
+    <div class="card">
+    <div class="card-body" style="width: auto;">
+        <form action="/emp-add" class="row g-4" method="POST">
+            <div class="col-md-7">
+                <label for="fullname" class="form-label">Full Name</label>
+                <input type="text" class="form-control" name="name"id="fullname">
+            </div>
+
+            <div class="col-md-3">
+                <label for="contact-no" class="form-label">Contact No</label>
+                <input type="text" class="form-control" name="phone" id="contact-no">
+                </div>
+
+            <div class="col-md-3">
+                <label for="empid" class="form-label">Employee ID</label>
+                <input type="text" class="form-control" name="empid" id="empid">
+                </div>
+
+            <div class="col-md-3">
+                <label for="department" class="form-label">Department</label>
+                <input type="text" class="form-control" name="dept" id="department">
+            </div>
+
+            <div class="col-md-3">
+                <label for="joiningdate" class="form-label">Joining Date</label>
+                <input type="date" class="form-control" name="jdate" id="joiningdate">
+            </div>
+
+            <div class="col-7">
+                <label for="address1" class="form-label">Address</label>
+                <input type="text" class="form-control" name="add" id="address1" placeholder="S.R. No 123, House/Appartment Name, Colony/Chaul Name, Landmark, Area name">
+            </div>
+
+            <div class="col-md-3">
+                <label for="State" class="form-label">State</label>
+                <select id="State" class="form-select" name="state">
+                    <option>Select state</option>
+                    <option value="AN">Andaman and Nicobar Islands</option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="AR">Arunachal Pradesh</option>
+                    <option value="AS">Assam</option>
+                    <option value="BR">Bihar</option>
+                    <option value="CH">Chandigarh</option>
+                    <option value="CT">Chhattisgarh</option>
+                    <option value="DN">Dadra and Nagar Haveli</option>
+                    <option value="DD">Daman and Diu</option>
+                    <option value="DL">Delhi</option>
+                    <option value="GA">Goa</option>
+                    <option value="GJ">Gujarat</option>
+                    <option value="HR">Haryana</option>
+                    <option value="HP">Himachal Pradesh</option>
+                    <option value="JK">Jammu and Kashmir</option>
+                    <option value="JH">Jharkhand</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="KL">Kerala</option>
+                    <option value="LA">Ladakh</option>
+                    <option value="LD">Lakshadweep</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="MH">Maharashtra</option>
+                    <option value="MN">Manipur</option>
+                    <option value="ML">Meghalaya</option>
+                    <option value="MZ">Mizoram</option>
+                    <option value="NL">Nagaland</option>
+                    <option value="OR">Odisha</option>
+                    <option value="PY">Puducherry</option>
+                    <option value="PB">Punjab</option>
+                    <option value="RJ">Rajasthan</option>
+                    <option value="SK">Sikkim</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="TG">Telangana</option>
+                    <option value="TR">Tripura</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="UT">Uttarakhand</option>
+                    <option value="WB">West Bengal</option>
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <label for="idproof" class="form-label">ID Proof</label>
+                <select id="idproof" class="form-select" name="idproof">
+                <option>Select state</option>
+                <option value="ADHAR">Adhar</option>
+                <option value="PAN">PAN</option>
+                <option value="Light Bill">Light Bill</option>
+                <option value="Driving Liscence">DL</option>
+                </select>
+            </div>
+                    
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Employee details</title>
+    {% include 'bootstrap.html' %}
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+
+    <h1 class="text-center my-3">List of Employees</h1>
+    
+    <div class="container">
+        <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>EMP ID</th>
+                    <th>WORKING</th>
+                    <th>JOINING DATE</th>
+                    <th>LAST DATE</th>
+                    <th>DEPARTMENT</th>
+                    <th>FULL NAME</th>
+                    <th>CONTACT NO</th>
+                    <th>ADDRESS</th>
+                    <th>STATE</th>
+                    <th>ID PROOF</th>
+                    <th>    </th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for data in empdata %}
+                        <tr>
+                            <td>{{data['emp_id']}}</td>
+                            <td>{{data['working']}}</td>
+                            <td>{{data['jdate']}}</td>
+                            <td>{{data['ldate']}}</td>
+                            <td>{{data['dept']}}</td>
+                            <td>{{data['name']}}</td>
+                            <td>{{data['phone']}}</td>
+                            <td>{{data['add']}}</td>
+                            <td>{{data['state']}}</td>
+                            <td>{{data['idproof']}}</td>
+                            <td>
+                                <a href="/emp-update/{{data['emp_id']}}" class="btn btn-dark btn-sm">Update</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+
